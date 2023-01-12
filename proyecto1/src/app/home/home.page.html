@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar color="mi-color">
-    <ion-title>home</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button [routerLink]="['/usuarios']" class="botonHome">Go to usuarios</ion-button>
+  <ion-grid class="grid">
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="6">
+        <div class="text">Pepe</div>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="6">
+        <div class="text">Juan</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="9">
+        <div class="text">Pepa</div>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="3">
+        <div class="text">Juana</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="contenedor_boton">
+
+    <ion-button [routerLink]="['/usuarios']" class="botonHome">Go to usuarios</ion-button>
+  </div>
 </ion-content>

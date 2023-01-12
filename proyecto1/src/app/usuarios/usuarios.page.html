@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>usuarios</ion-title>
+    <ion-title>Usuarios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button (click)="irhome()" class="botonHome">Go to home</ion-button>
-</ion-content>
+<ion-app>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen>
+    <ion-list>
+      <ion-list-header>
+        Recent Conversations
+      </ion-list-header>
+
+      <ion-item *ngFor="let user of usuarios">
+        <ion-avatar slot="start">
+          <img src="{{user.image}}">
+        </ion-avatar>
+        <ion-avatar slot="end">
+          <ion-icon name="search-outline"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="list__nom">{{user.name}}</h2>
+          <h3>{{user.state}}</h3>
+          <p>{{user.description}}</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+    <ion-button (click)="irhome()" class="botonHome">Go to home</ion-button>
+  </ion-content>
+</ion-app>

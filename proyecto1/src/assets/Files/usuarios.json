@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "name": "Han",
+            "state": "Look, kid...",
+            "description": "I've got enough on my plate as it is, and I...",
+            "image": "../../assets/img/avatar-han.png"
+        },
+        {
+            "name": "Finn",
+            "state": "I'm a big deal",
+            "description": "Listen, I've had a pretty messed up day...",
+            "image": "../../assets/img/avatar-finn.png"
+        },
+        {
+            "name": "Rey",
+            "state": "I can handle myself",
+            "description": "You will remove these restraints and leave...",
+            "image": "../../assets/img/avatar-rey.png"
+        },
+        {
+            "name": "Luke",
+            "state": "Your thoughts betray you",
+            "description": "I feel the good in you, the conflict...",
+            "image": "../../assets/img/avatar-luke.png"
+        },
+        {
+            "name": "Poe",
+            "state": "New Ride",
+            "description": "I just upgraded my X-Wing. Next time...",
+            "image": "../../assets/img/avatar-poe.png"
+        },
+        {
+            "name": "Ben",
+            "state": "Move Along",
+            "description": "These aren't the droids you're looking for...",
+            "image": "../../assets/img/avatar-ben.png"
+        },
+        {
+            "name": "Leia",
+            "state": "You're My Only Hope",
+            "description": "I've placed information vital to the survival...",
+            "image": "../../assets/img/avatar-leia.png"
+        },
+        {
+            "name": "Yoda",
+            "state": "Size matters not",
+            "description": "Do or do not. There is no try...",
+            "image": "../../assets/img/avatar-yoda.png"
+        }
+    ]
+}
