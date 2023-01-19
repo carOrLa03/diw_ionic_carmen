@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "name": "Valencia",
+            "image": "../../assets/img/img-ciudades/valen1.jpg"
+        },
+        {
+            "name": "Sevilla",
+            "image": "../../assets/img/img-ciudades/sevilla.jpg"
+        },
+        {
+            "name": "Madrid",
+            "image": "../../assets/img/img-ciudades/madrid1.jpg"
+        },
+        {
+            "name": "Bilbao",
+            "image": "../../assets/img/img-ciudades/bilbao.jpg"
+        },
+        {
+            "name": "Barcelona",
+            "image": "../../assets/img/img-ciudades/barcelona.jpg"
+        },
+        {
+            "name": "Alicante",
+            "image": "../../assets/img/img-ciudades/alicante1.jpg"
+        }
+    ]
+}

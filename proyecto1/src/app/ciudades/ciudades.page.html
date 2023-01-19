@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Ciudades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let ciudad of ciudades">
+      <ion-card (click)="presentAlert()">
+        <img src="{{ciudad.image}}" alt="{{ciudad.name}}">
+        <div class="card-titulo ion-text-center">{{ciudad.name}}</div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-button (click)="irHome()" class="botonHome" color="">Go to home</ion-button>
+</ion-content>

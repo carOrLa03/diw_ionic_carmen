@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-title>Usuarios</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,7 +12,7 @@
   </ion-header>
 
   <ion-content fullscreen>
-    <ion-list>
+    <ion-list *ngIf="permission">
       <ion-list-header>
         Recent Conversations
       </ion-list-header>
@@ -32,6 +32,7 @@
       </ion-item>
 
     </ion-list>
+    <ion-label *ngIf="!permission">No tienes permisos para ver los clientes!!</ion-label>
     <ion-button (click)="irhome()" class="botonHome">Go to home</ion-button>
   </ion-content>
 </ion-app>
