@@ -2,6 +2,9 @@
   <ion-toolbar color="danger">
     <ion-title>Usuarios</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar" animated (ionChange)="searchClientes($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-app>
@@ -17,7 +20,7 @@
         Recent Conversations
       </ion-list-header>
 
-      <ion-item *ngFor="let user of usuarios">
+      <ion-item *ngFor="let user of searchUsuario">
         <ion-avatar slot="start">
           <img src="{{user.image}}">
         </ion-avatar>

@@ -9,19 +9,23 @@ const routes: Routes = [
   },
   {
     path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'usuarios',
-    loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+    loadChildren: () => import('./usuarios/usuarios.module').then(m => m.UsuariosPageModule)
   },
   {
     path: 'ciudades',
-    loadChildren: () => import('./ciudades/ciudades.module').then( m => m.CiudadesPageModule)
+    loadChildren: () => import('./ciudades/ciudades.module').then(m => m.CiudadesPageModule)
+  },
+  {
+    path: 'ciudad/:id',
+    loadChildren: () => import('./ciudad/ciudad.module').then(m => m.CiudadPageModule)
   }
 ];
 
@@ -31,4 +35,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

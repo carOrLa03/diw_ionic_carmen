@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="mi-color">
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img src="../../assets/img-ciudades/{{image}}" alt="imagen de {{name}}">
+  </ion-card>
+  <div class="desc">{{description}}</div>
+
+  <ion-button [routerLink]="['/']">Inicio</ion-button>
+
+</ion-content>

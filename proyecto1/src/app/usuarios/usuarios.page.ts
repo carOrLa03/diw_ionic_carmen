@@ -13,6 +13,8 @@ export class UsuariosPage implements OnInit {
   usuarios: any = [];
   permission: boolean | undefined;
 
+  searchUsuario: any;
+
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
@@ -20,12 +22,13 @@ export class UsuariosPage implements OnInit {
     this.getUsers().subscribe(res => {
       console.log("Res", res)
       this.usuarios = res;
+      this.searchUsuario = this.usuarios;
     })
 
   }
 
   irhome() {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/'])
   }
 
   getUsers() {
@@ -36,6 +39,17 @@ export class UsuariosPage implements OnInit {
           return res.data;
         })
       )
+  }
+
+  searchClientes(event: any) {
+    const text = event.target.value
+    this.searchUsuario = this.usuarios
+
+    if (text && text.trim() != "") { //si el texto es diferente a vacío
+      this.searchUsuario = this.searchUsuario.filter((user: any) => { //hacemos una busqueda en el usuario
+        return (user.name.toLowerCase().indexOf(text.toLowerCase()) > -1); //lodevolvemos en minuscula para que pueda realizar la busqueda sin problemas
+      })
+    }
   }
 
 }

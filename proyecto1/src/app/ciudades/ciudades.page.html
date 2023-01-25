@@ -2,12 +2,15 @@
   <ion-toolbar color="danger">
     <ion-title>Ciudades</ion-title>
   </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar placeholder="Buscar" animated (ionChange)="searchCiudades($event)"></ion-searchbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-row>
-    <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let ciudad of ciudades">
-      <ion-card (click)="presentAlert()">
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let ciudad of searchCiudad">
+      <ion-card (click)="presentAlert()" [routerLink]="['/ciudad', ciudad.id]" routerLinkActive="router-link-active" >
         <img src="{{ciudad.image}}" alt="{{ciudad.name}}">
         <div class="card-titulo ion-text-center">{{ciudad.name}}</div>
       </ion-card>
