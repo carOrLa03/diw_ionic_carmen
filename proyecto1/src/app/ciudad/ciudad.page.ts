@@ -25,23 +25,23 @@ export class CiudadPage implements OnInit {
     this.finalId = this.id - 1
     console.log(this.id)
 
-    this.getCiudades().subscribe(res => { 
+    this.getCiudades().subscribe(res => {
       console.log(res)
       this.ciudades = res
-      this.name = this.ciudades[this.finalId].name 
+      this.name = this.ciudades[this.finalId].name
       this.image = this.ciudades[this.finalId].image
       this.description = this.ciudades[this.finalId].description
     })
-    
-    
+
+
   }
 
-  getCiudades() { 
+  getCiudades() {
     return this.http
       .get("assets/Files/ciudades.json")
       .pipe(
         map((res: any) => { return res.data; })
-    )
+      )
   }
 
 }
