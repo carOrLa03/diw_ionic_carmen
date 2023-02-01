@@ -24,6 +24,11 @@
     </ion-row>
   </ion-grid>
   <div class="contenedor_boton">
+    <ion-button (click)="scan()">Escanear código</ion-button>
+    <span>{{code}}</span>
+  </div>
+
+  <div class="contenedor_boton">
 
     <ion-button [routerLink]="['/usuarios']" class="botonHome">Go to usuarios</ion-button>
   </div>

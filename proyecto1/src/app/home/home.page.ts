@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  code: any;
+
+  constructor(private barcoScanner: BarcodeScanner) { }
 
   ngOnInit() {
+  }
+
+  scan() {
+    this.barcoScanner.scan().then(barcoScanner => {
+
+      this.code = barcoScanner.text
+      console.log('Barcode data', this.code);
+    }).catch(err => {
+      console.log('Error', err)
+    })
   }
 
 }
